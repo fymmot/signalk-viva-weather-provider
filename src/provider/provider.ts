@@ -52,7 +52,12 @@ export function createVivaProviderMethods(
           if (r.distanceKm > config.observations.maxStationDistanceKm) break
           const parsed = await viva.fetchStationWind(r.station.id).catch(() => null)
           if (!parsed) continue
-          const entry = { parsed, distanceKm: r.distanceKm, stationName: r.station.name }
+          const entry = {
+            parsed,
+            distanceKm: r.distanceKm,
+            stationName: r.station.name,
+            stationCoordinates: r.station.coordinates
+          }
           if (parsed.observationStale) {
             if (!nearestStale) nearestStale = { w: entry, distanceKm: r.distanceKm }
             continue
@@ -74,7 +79,8 @@ export function createVivaProviderMethods(
       }
 
       const descriptionParts: string[] = []
-      const stationLabel = (obs.stationName as string) || (obs.parsed.stationName as string) || 'Viva'
+      const stationLabel =
+        (obs.stationName as string) || (obs.parsed.stationName as string) || 'Viva'
       descriptionParts.push(stationLabel)
       descriptionParts.push(`${(obs.distanceKm * KM_TO_NM).toFixed(1)}NM`)
       if (w.observationQuality) descriptionParts.push(w.observationQuality)
@@ -83,6 +89,15 @@ export function createVivaProviderMethods(
         date: w.timestamp || new Date().toISOString(),
         type: 'observation',
         description: descriptionParts.join(' · '),
+        // Provider-specific extension (not currently part of the core WeatherData type):
+        // lets clients compute accurate distance to the station.
+        station: {
+          name: stationLabel,
+          position: {
+            latitude: obs.stationCoordinates.latitude,
+            longitude: obs.stationCoordinates.longitude
+          }
+        } as any,
         wind: {
           ...(typeof w.averageSpeed === 'number' ? { speedTrue: w.averageSpeed } : {}),
           ...(typeof w.direction === 'number' ? { directionTrue: w.direction } : {}),
