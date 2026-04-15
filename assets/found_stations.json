@@ -1,0 +1,3628 @@
+{
+  "windStations": [
+    {
+      "id": 207,
+      "name": "Adelsö (SMHI)",
+      "coordinates": {
+        "latitude": 59.357934,
+        "longitude": 17.521315
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 21,
+      "name": "Ale",
+      "coordinates": {
+        "latitude": 59.3203,
+        "longitude": 18.0991
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "watertemp",
+          "pressure",
+          "air",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattentemp",
+          "Lufttryck (MSLP)",
+          "Luftfuktighet",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 15,
+      "name": "Arkö (SMHI)",
+      "coordinates": {
+        "latitude": 58.483945,
+        "longitude": 16.96115
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 17,
+      "name": "Atle",
+      "coordinates": {
+        "latitude": 65.5718,
+        "longitude": 22.171
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "watertemp",
+          "pressure",
+          "air",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattentemp",
+          "Lufttryck (MSLP)",
+          "Luftfuktighet",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 25,
+      "name": "Barsebäck",
+      "coordinates": {
+        "latitude": 55.74588,
+        "longitude": 12.9168
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 223,
+      "name": "Bjuröklubb (SMHI)",
+      "coordinates": {
+        "latitude": 64.479937,
+        "longitude": 21.575395
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 141,
+      "name": "Blockhusudden (SH)",
+      "coordinates": {
+        "latitude": 59.32078,
+        "longitude": 18.15478
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 27,
+      "name": "Brandalsund",
+      "coordinates": {
+        "latitude": 59.0998,
+        "longitude": 17.67833
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 33,
+      "name": "Bönan",
+      "coordinates": {
+        "latitude": 60.7315,
+        "longitude": 17.325833
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 5,
+      "name": "Dalbobron",
+      "coordinates": {
+        "latitude": 58.382367,
+        "longitude": 12.310783
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "level"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 35,
+      "name": "Eggegrund",
+      "coordinates": {
+        "latitude": 60.728167,
+        "longitude": 17.557833
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 119,
+      "name": "Falkenberg Vind",
+      "coordinates": {
+        "latitude": 56.88462,
+        "longitude": 12.468391
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 209,
+      "name": "Falsterbo (SMHI)",
+      "coordinates": {
+        "latitude": 55.383698,
+        "longitude": 12.8166
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 111,
+      "name": "Flinten SW",
+      "coordinates": {
+        "latitude": 55.518195,
+        "longitude": 12.744768
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 186,
+      "name": "Fogden",
+      "coordinates": {
+        "latitude": 59.031217,
+        "longitude": 12.73835
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "watertemp",
+          "pressure",
+          "air",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattentemp",
+          "Lufttryck",
+          "Luftfuktighet",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 12,
+      "name": "Forsmark",
+      "coordinates": {
+        "latitude": 60.408611,
+        "longitude": 18.210833
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 22,
+      "name": "Frej",
+      "coordinates": {
+        "latitude": 65.5727,
+        "longitude": 22.1704
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "watertemp",
+          "pressure",
+          "air",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattentemp",
+          "Lufttryck (MSLP)",
+          "Luftfuktighet",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 140,
+      "name": "Frihamnen (SH)",
+      "coordinates": {
+        "latitude": 59.3463,
+        "longitude": 18.12708
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 211,
+      "name": "Gotska Sandön (SMHI)",
+      "coordinates": {
+        "latitude": 58.393938,
+        "longitude": 19.193992
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 196,
+      "name": "Gräsrännan",
+      "coordinates": {
+        "latitude": 55.861634,
+        "longitude": 12.794781
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 153,
+      "name": "Gubben",
+      "coordinates": {
+        "latitude": 62.349932,
+        "longitude": 17.578059
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 40,
+      "name": "Gåsören",
+      "coordinates": {
+        "latitude": 64.6633,
+        "longitude": 21.3167
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 185,
+      "name": "Gävle hamn (Gävle Hamn AB)",
+      "coordinates": {
+        "latitude": 60.6967,
+        "longitude": 17.2314
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "level"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 212,
+      "name": "Hallands Väderö (SMHI)",
+      "coordinates": {
+        "latitude": 56.449629,
+        "longitude": 12.545327
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 179,
+      "name": "Halmstad Vind",
+      "coordinates": {
+        "latitude": 56.651137,
+        "longitude": 12.840496
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 113,
+      "name": "Hamneskär",
+      "coordinates": {
+        "latitude": 57.896333,
+        "longitude": 11.467167
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 213,
+      "name": "Hanö (SMHI)",
+      "coordinates": {
+        "latitude": 56.0135,
+        "longitude": 14.846294
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 44,
+      "name": "Hargs Hamn",
+      "coordinates": {
+        "latitude": 60.17,
+        "longitude": 18.482
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 214,
+      "name": "Harstena (SMHI)",
+      "coordinates": {
+        "latitude": 58.250602,
+        "longitude": 17.007431
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 45,
+      "name": "Helsingborg",
+      "coordinates": {
+        "latitude": 56.041167,
+        "longitude": 12.6845
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 56,
+      "name": "Hjulstabron",
+      "coordinates": {
+        "latitude": 59.533067,
+        "longitude": 17.008166
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp",
+          "sight"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Medelvind",
+          "Byvind",
+          "Vattentemp",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 137,
+      "name": "Hoburg (SMHI)",
+      "coordinates": {
+        "latitude": 56.920945,
+        "longitude": 18.150568
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "pressure",
+          "air",
+          "airtemp",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Lufttryck (MSLP)",
+          "Luftfuktighet",
+          "Lufttemp",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 215,
+      "name": "Holmön (SMHI)",
+      "coordinates": {
+        "latitude": 63.806963,
+        "longitude": 20.864478
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 174,
+      "name": "Husum",
+      "coordinates": {
+        "latitude": 63.318495,
+        "longitude": 19.156173
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 150,
+      "name": "Huvudskär havsboj (SMHI)",
+      "coordinates": {
+        "latitude": 58.9358,
+        "longitude": 19.1597
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "pressure",
+          "airtemp",
+          "wave"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Lufttryck",
+          "Lufttemp",
+          "Våghöjd"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 4,
+      "name": "Hävringe",
+      "coordinates": {
+        "latitude": 58.603779,
+        "longitude": 17.315855
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Medelvind",
+          "Byvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 58,
+      "name": "Juten",
+      "coordinates": {
+        "latitude": 58.63418,
+        "longitude": 16.324758
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp",
+          "sight"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 216,
+      "name": "Järnäsklubb (SMHI)",
+      "coordinates": {
+        "latitude": 63.435094,
+        "longitude": 19.673059
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 59,
+      "name": "Kalix-Karlsborg",
+      "coordinates": {
+        "latitude": 65.788833,
+        "longitude": 23.303333
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 60,
+      "name": "Kalmar",
+      "coordinates": {
+        "latitude": 56.671283,
+        "longitude": 16.3888
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "water",
+          "watertemp",
+          "stream"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Medelvind",
+          "Byvind",
+          "Salthalt Botten",
+          "Vattentemp",
+          "Ström Yta",
+          "Ström 3m",
+          "Ström 6m",
+          "Densitet Botten"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 104,
+      "name": "Kapellskär (SH)",
+      "coordinates": {
+        "latitude": 59.72443,
+        "longitude": 19.06576
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 99,
+      "name": "Karet (GBG Hamn)",
+      "coordinates": {
+        "latitude": 57.68775,
+        "longitude": 11.869629
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water",
+          "watertemp",
+          "wind",
+          "pressure",
+          "airtemp",
+          "sight",
+          "stream"
+        ],
+        "sensorNames": [
+          "Salthalt Botten",
+          "Vattentemp 3m",
+          "Syrehalt Botten",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp Botten",
+          "Lufttryck",
+          "Lufttemp",
+          "Sikt",
+          "Ström 3m",
+          "Ström Yta",
+          "Ström 7m",
+          "Ström 11m",
+          "Salthalt 3m",
+          "Densitet 3m",
+          "Densitet Botten"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 61,
+      "name": "Karlshamn",
+      "coordinates": {
+        "latitude": 56.154167,
+        "longitude": 14.821167
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 217,
+      "name": "Kuggören (SMHI)",
+      "coordinates": {
+        "latitude": 61.702663,
+        "longitude": 17.521597
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 184,
+      "name": "Köpmanholmen Hamn",
+      "coordinates": {
+        "latitude": 63.172349,
+        "longitude": 18.58803
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 62,
+      "name": "Lagnögrund",
+      "coordinates": {
+        "latitude": 59.35858,
+        "longitude": 18.4151
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 228,
+      "name": "Landskrona Hamn",
+      "coordinates": {
+        "latitude": 55.85944,
+        "longitude": 12.82929
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 225,
+      "name": "Landsort (SMHI)",
+      "coordinates": {
+        "latitude": 58.742854,
+        "longitude": 17.868392
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 63,
+      "name": "Larsgrund",
+      "coordinates": {
+        "latitude": 65.468833,
+        "longitude": 22.464167
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 189,
+      "name": "Ljusne Lotsstation",
+      "coordinates": {
+        "latitude": 61.206775,
+        "longitude": 17.145166
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 202,
+      "name": "Lungö (SMHI)",
+      "coordinates": {
+        "latitude": 62.641715,
+        "longitude": 18.089929
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 68,
+      "name": "Malmö Hamn",
+      "coordinates": {
+        "latitude": 55.6257,
+        "longitude": 12.9845
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 227,
+      "name": "Malmö Oljehamn Yttre (CMP)",
+      "coordinates": {
+        "latitude": 55.66563,
+        "longitude": 12.97035
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "stream"
+        ],
+        "sensorNames": [
+          "Medelvind",
+          "Ström Yta",
+          "Ström 4m",
+          "Ström 7m"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 70,
+      "name": "Mitholmarna",
+      "coordinates": {
+        "latitude": 57.9669,
+        "longitude": 11.7283
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 218,
+      "name": "Måseskär (SMHI)",
+      "coordinates": {
+        "latitude": 58.093727,
+        "longitude": 11.331159
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 219,
+      "name": "Naven (SMHI)",
+      "coordinates": {
+        "latitude": 58.699445,
+        "longitude": 13.108381
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 220,
+      "name": "Nidingen (SMHI)",
+      "coordinates": {
+        "latitude": 57.303642,
+        "longitude": 11.904883
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 131,
+      "name": "Nordkoster (SMHI)",
+      "coordinates": {
+        "latitude": 58.89199,
+        "longitude": 11.003808
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 133,
+      "name": "Nordvalen",
+      "coordinates": {
+        "latitude": 63.5362,
+        "longitude": 20.7721
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "watertemp",
+          "pressure",
+          "air",
+          "airtemp",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattentemp",
+          "Lufttryck",
+          "Luftfuktighet",
+          "Lufttemp",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 1,
+      "name": "Norrköping NK",
+      "coordinates": {
+        "latitude": 58.591333,
+        "longitude": 16.198833
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 180,
+      "name": "Norvik (SH)",
+      "coordinates": {
+        "latitude": 58.937667,
+        "longitude": 17.979972
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "pressure",
+          "air",
+          "airtemp",
+          "sight"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Lufttryck",
+          "Luftfuktighet",
+          "Lufttemp",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 105,
+      "name": "Nynäs färjeterminal (SH)",
+      "coordinates": {
+        "latitude": 58.9081,
+        "longitude": 17.95834
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 71,
+      "name": "Nynäs oljehamn",
+      "coordinates": {
+        "latitude": 58.917167,
+        "longitude": 17.973
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 72,
+      "name": "Oskarshamn Vind",
+      "coordinates": {
+        "latitude": 57.2662,
+        "longitude": 16.4762
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 10,
+      "name": "Oxelösund Vinterklasen",
+      "coordinates": {
+        "latitude": 58.640583,
+        "longitude": 17.129783
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 201,
+      "name": "Pite Rönnskär (SMHI)",
+      "coordinates": {
+        "latitude": 65.033984,
+        "longitude": 21.560895
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 6,
+      "name": "Pålgrunden (SMHI)",
+      "coordinates": {
+        "latitude": 58.755124,
+        "longitude": 13.151424
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 73,
+      "name": "Remmargrund",
+      "coordinates": {
+        "latitude": 59.7588,
+        "longitude": 19.316767
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 74,
+      "name": "Renöragrund",
+      "coordinates": {
+        "latitude": 65.193983,
+        "longitude": 21.582666
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 75,
+      "name": "Revengegrundet",
+      "coordinates": {
+        "latitude": 59.251,
+        "longitude": 19.012833
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 57,
+      "name": "Revet",
+      "coordinates": {
+        "latitude": 63.655466,
+        "longitude": 20.3401
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 76,
+      "name": "Ringhals",
+      "coordinates": {
+        "latitude": 57.2498,
+        "longitude": 12.11255
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 199,
+      "name": "Rödkallen (SMHI)",
+      "coordinates": {
+        "latitude": 65.312069,
+        "longitude": 22.37093
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 77,
+      "name": "Simpevarp (SKB)",
+      "coordinates": {
+        "latitude": 57.40915,
+        "longitude": 16.675933
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 110,
+      "name": "Skagsudde",
+      "coordinates": {
+        "latitude": 63.188065,
+        "longitude": 19.016092
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 182,
+      "name": "Skallen",
+      "coordinates": {
+        "latitude": 57.890468,
+        "longitude": 11.558314
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 200,
+      "name": "Skarpö (SMHI)",
+      "coordinates": {
+        "latitude": 59.344558,
+        "longitude": 18.740434
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 203,
+      "name": "Skillinge (SMHI)",
+      "coordinates": {
+        "latitude": 55.489012,
+        "longitude": 14.314383
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 80,
+      "name": "Skötkobben",
+      "coordinates": {
+        "latitude": 59.28633,
+        "longitude": 18.89408
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 81,
+      "name": "Slite",
+      "coordinates": {
+        "latitude": 57.706,
+        "longitude": 18.81
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "level"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 143,
+      "name": "Stenungsund (Petroport)",
+      "coordinates": {
+        "latitude": 58.091131,
+        "longitude": 11.812719
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "pressure",
+          "airtemp",
+          "stream"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Lufttryck",
+          "Lufttemp",
+          "Ström 0-8m"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 222,
+      "name": "Storön (SMHI)",
+      "coordinates": {
+        "latitude": 65.697197,
+        "longitude": 23.095864
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 98,
+      "name": "Stretudden",
+      "coordinates": {
+        "latitude": 58.35308,
+        "longitude": 11.42653
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 115,
+      "name": "Strömören",
+      "coordinates": {
+        "latitude": 65.5497,
+        "longitude": 22.23827
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp",
+          "stream"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp Botten",
+          "Ström Yta",
+          "Ström 4m",
+          "Ström 2m",
+          "Ström 6m"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 83,
+      "name": "Stötbotten",
+      "coordinates": {
+        "latitude": 57.275167,
+        "longitude": 16.553
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 164,
+      "name": "Subbeberget",
+      "coordinates": {
+        "latitude": 57.088155,
+        "longitude": 12.236916
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 191,
+      "name": "Sundsvalls Hamn",
+      "coordinates": {
+        "latitude": 62.402386,
+        "longitude": 17.397854
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 87,
+      "name": "Svartklubben",
+      "coordinates": {
+        "latitude": 60.174433,
+        "longitude": 18.8249
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 204,
+      "name": "Svenska Högarna (SMHI)",
+      "coordinates": {
+        "latitude": 59.4423,
+        "longitude": 19.502219
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 166,
+      "name": "Söderarm (SMHI)",
+      "coordinates": {
+        "latitude": 59.753119,
+        "longitude": 19.405373
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "air",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Luftfuktighet",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 3,
+      "name": "Södertälje Saltsjön",
+      "coordinates": {
+        "latitude": 59.192,
+        "longitude": 17.632333
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 124,
+      "name": "Tingstad",
+      "coordinates": {
+        "latitude": 57.72205,
+        "longitude": 11.98865
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 101,
+      "name": "Torshamnen (GBG Hamn)",
+      "coordinates": {
+        "latitude": 57.681105,
+        "longitude": 11.7881
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water",
+          "watertemp",
+          "wind",
+          "pressure",
+          "airtemp",
+          "sight",
+          "stream"
+        ],
+        "sensorNames": [
+          "Salthalt Botten",
+          "Vattentemp 3m",
+          "Syrehalt Botten",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp Botten",
+          "Lufttryck",
+          "Lufttemp",
+          "Sikt",
+          "Ström 3m",
+          "Ström Yta",
+          "Ström 7m",
+          "Ström 15m",
+          "Ström 11m",
+          "Salthalt 3m",
+          "Densitet 3m",
+          "Densitet Botten"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 88,
+      "name": "Tån",
+      "coordinates": {
+        "latitude": 58.29835,
+        "longitude": 11.32745
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 14,
+      "name": "Uddevalla (SMHI)",
+      "coordinates": {
+        "latitude": 58.345147,
+        "longitude": 11.906945
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 205,
+      "name": "Utklippan (SMHI)",
+      "coordinates": {
+        "latitude": 55.955712,
+        "longitude": 15.704811
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 177,
+      "name": "Verkö (KBP)",
+      "coordinates": {
+        "latitude": 56.164433,
+        "longitude": 15.628894
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp",
+          "pressure",
+          "air",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp",
+          "Lufttryck",
+          "Luftfuktighet",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 114,
+      "name": "Vinga",
+      "coordinates": {
+        "latitude": 57.631667,
+        "longitude": 11.607583
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 90,
+      "name": "Visby",
+      "coordinates": {
+        "latitude": 57.6393,
+        "longitude": 18.2845
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 206,
+      "name": "Visingsö (SMHI)",
+      "coordinates": {
+        "latitude": 58.094814,
+        "longitude": 14.405769
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 210,
+      "name": "Väderöarna (SMHI)",
+      "coordinates": {
+        "latitude": 58.575989,
+        "longitude": 11.066088
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 93,
+      "name": "Västerbådan",
+      "coordinates": {
+        "latitude": 57.747268,
+        "longitude": 16.741637
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 20,
+      "name": "Ymer",
+      "coordinates": {
+        "latitude": 58.3472,
+        "longitude": 11.8989
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "watertemp",
+          "pressure",
+          "air",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Vattentemp",
+          "Lufttryck (MSLP)",
+          "Luftfuktighet",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 94,
+      "name": "Ystad",
+      "coordinates": {
+        "latitude": 55.422667,
+        "longitude": 13.8255
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 96,
+      "name": "Ålandets grund",
+      "coordinates": {
+        "latitude": 59.6822,
+        "longitude": 18.9831
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 148,
+      "name": "Ölands Norra Udde (SMHI)",
+      "coordinates": {
+        "latitude": 57.367077,
+        "longitude": 17.095401
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "wind"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 136,
+      "name": "Ölands Södra Udde (SMHI)",
+      "coordinates": {
+        "latitude": 56.19766,
+        "longitude": 16.400492
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "pressure",
+          "air",
+          "airtemp",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Lufttryck (MSLP)",
+          "Luftfuktighet",
+          "Lufttemp",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 197,
+      "name": "Örskär (SMHI)",
+      "coordinates": {
+        "latitude": 60.525619,
+        "longitude": 18.372944
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 198,
+      "name": "Östergarnsholm (SMHI)",
+      "coordinates": {
+        "latitude": 57.440752,
+        "longitude": 18.983913
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind"
+        ]
+      },
+      "hasWindSensors": true
+    },
+    {
+      "id": 194,
+      "name": "Östra Älgögrund",
+      "coordinates": {
+        "latitude": 59.445468,
+        "longitude": 18.413419
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wind",
+          "sight"
+        ],
+        "sensorNames": [
+          "Byvind",
+          "Medelvind",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": true
+    }
+  ],
+  "otherStations": [
+    {
+      "id": 169,
+      "name": "Agnesberg (GBG Stad)",
+      "coordinates": {
+        "latitude": 57.789774,
+        "longitude": 12.010189
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 30,
+      "name": "Brinkebergskulle Nedre",
+      "coordinates": {
+        "latitude": 58.34005,
+        "longitude": 12.351683
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 31,
+      "name": "Brinkebergskulle Övre",
+      "coordinates": {
+        "latitude": 58.34102,
+        "longitude": 12.35092
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 32,
+      "name": "Brofjorden",
+      "coordinates": {
+        "latitude": 58.336,
+        "longitude": 11.4046
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 135,
+      "name": "Brofjordens Angöring",
+      "coordinates": {
+        "latitude": 58.2522,
+        "longitude": 11.2226
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wave",
+          "watertemp",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Vågperiod",
+          "Vattentemp",
+          "Lufttemp",
+          "Våghöjd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 34,
+      "name": "E4 Bron Södertälje",
+      "coordinates": {
+        "latitude": 59.184833,
+        "longitude": 17.642833
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp",
+          "sight"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 168,
+      "name": "Eriksberg (GBG Stad)",
+      "coordinates": {
+        "latitude": 57.696567,
+        "longitude": 11.908833
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 36,
+      "name": "Falkenberg Vatten",
+      "coordinates": {
+        "latitude": 56.892,
+        "longitude": 12.4895
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 11,
+      "name": "Finngrundet (SMHI)",
+      "coordinates": {
+        "latitude": 60.8992,
+        "longitude": 18.6096
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wave",
+          "watertemp",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Vågperiod",
+          "Vattentemp",
+          "Lufttemp",
+          "Våghöjd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 91,
+      "name": "Flinten 16",
+      "coordinates": {
+        "latitude": 55.56098,
+        "longitude": 12.809541
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water",
+          "level",
+          "watertemp",
+          "stream"
+        ],
+        "sensorNames": [
+          "Salthalt Botten",
+          "Syrehalt Botten",
+          "Vattenstånd",
+          "Vattentemp",
+          "Vattentemp Botten",
+          "Ström Yta",
+          "Ström 4m",
+          "Ström 2m",
+          "Ström 6m",
+          "Densitet Botten"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 86,
+      "name": "Flinten 7",
+      "coordinates": {
+        "latitude": 55.589379,
+        "longitude": 12.844475
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water",
+          "level",
+          "watertemp",
+          "stream"
+        ],
+        "sensorNames": [
+          "Syrehalt Botten",
+          "Vattenstånd",
+          "Vattentemp Botten",
+          "Ström Yta",
+          "Ström 4m",
+          "Ström 2m",
+          "Ström 6m",
+          "Salthalt",
+          "Salthalt Botten",
+          "Densitet Botten"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 39,
+      "name": "Furusund",
+      "coordinates": {
+        "latitude": 59.663757,
+        "longitude": 18.931997
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 158,
+      "name": "Furuögrund (SMHI)",
+      "coordinates": {
+        "latitude": 64.915833,
+        "longitude": 21.230555
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 41,
+      "name": "Göta",
+      "coordinates": {
+        "latitude": 58.0983,
+        "longitude": 12.1506
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 43,
+      "name": "Halmstad Vatten",
+      "coordinates": {
+        "latitude": 56.651267,
+        "longitude": 12.844659
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 129,
+      "name": "Helsingborg Sydhamnen (HHAB)",
+      "coordinates": {
+        "latitude": 56.01892,
+        "longitude": 12.69702
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "watertemp",
+          "stream"
+        ],
+        "sensorNames": [
+          "Vattentemp",
+          "Ström Yta"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 130,
+      "name": "Helsingborg Västhamnen (HHAB)",
+      "coordinates": {
+        "latitude": 56.02547,
+        "longitude": 12.69143
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "watertemp",
+          "stream"
+        ],
+        "sensorNames": [
+          "Vattentemp",
+          "Ström Yta"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 167,
+      "name": "Helsingborg Öresund (HHAB)",
+      "coordinates": {
+        "latitude": 56.01992,
+        "longitude": 12.6875
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "stream"
+        ],
+        "sensorNames": [
+          "Ström Yta",
+          "Ström 4-6m",
+          "Ström 8-10m",
+          "Ström 7m",
+          "Ström 11m",
+          "Ström 12-14m"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 193,
+      "name": "Hisingsbron",
+      "coordinates": {
+        "latitude": 57.71491,
+        "longitude": 11.968741
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp",
+          "sight"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 134,
+      "name": "Holmsund",
+      "coordinates": {
+        "latitude": 63.695429,
+        "longitude": 20.347527
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 126,
+      "name": "Jordfallsbron",
+      "coordinates": {
+        "latitude": 57.8555,
+        "longitude": 12.0091
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 161,
+      "name": "Kalix-Storön (SMHI)",
+      "coordinates": {
+        "latitude": 65.696944,
+        "longitude": 23.096111
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 147,
+      "name": "Klagshamn (SMHI)",
+      "coordinates": {
+        "latitude": 55.522348,
+        "longitude": 12.893668
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 7,
+      "name": "Knolls Grund (SMHI)",
+      "coordinates": {
+        "latitude": 57.5182,
+        "longitude": 17.6166
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wave",
+          "watertemp",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Vågperiod",
+          "Vattentemp",
+          "Lufttemp",
+          "Våghöjd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 183,
+      "name": "Krossholmen (SMHI)",
+      "coordinates": {
+        "latitude": 57.69129,
+        "longitude": 11.77117
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "dewpointtemp",
+          "level",
+          "watertemp",
+          "air",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Daggpunktstemperatur",
+          "Vattenstånd",
+          "Vattentemp",
+          "Luftfuktighet",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 170,
+      "name": "Kungsholmsfort (SMHI)",
+      "coordinates": {
+        "latitude": 56.105277,
+        "longitude": 15.589444
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 155,
+      "name": "Kungsvik (SMHI)",
+      "coordinates": {
+        "latitude": 58.996666,
+        "longitude": 11.127222
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 125,
+      "name": "Kvicksund",
+      "coordinates": {
+        "latitude": 59.452655,
+        "longitude": 16.32955
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 116,
+      "name": "Kälsholmen",
+      "coordinates": {
+        "latitude": 60.16039,
+        "longitude": 18.53422
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 53,
+      "name": "Köping",
+      "coordinates": {
+        "latitude": 59.494,
+        "longitude": 16.045166
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 165,
+      "name": "Landsort Norra (SMHI)",
+      "coordinates": {
+        "latitude": 58.768888,
+        "longitude": 17.858888
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 108,
+      "name": "Lilla Edet Flöde",
+      "coordinates": {
+        "latitude": 58.13564,
+        "longitude": 12.11973
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water"
+        ],
+        "sensorNames": [
+          "Vattenflöde"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 64,
+      "name": "Lilla Edet Nedre",
+      "coordinates": {
+        "latitude": 58.13618,
+        "longitude": 12.11751
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 65,
+      "name": "Lilla Edet Övre",
+      "coordinates": {
+        "latitude": 58.13739,
+        "longitude": 12.11994
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 54,
+      "name": "Linasundet",
+      "coordinates": {
+        "latitude": 59.21958,
+        "longitude": 17.60938
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 112,
+      "name": "Linasundet Sikt",
+      "coordinates": {
+        "latitude": 59.2134,
+        "longitude": 17.6102
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 172,
+      "name": "Lunde",
+      "coordinates": {
+        "latitude": 62.880676,
+        "longitude": 17.876419
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp",
+          "sight"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp",
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 226,
+      "name": "Malmö Oljehamn Inre (CMP)",
+      "coordinates": {
+        "latitude": 55.64868,
+        "longitude": 12.99986
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "stream"
+        ],
+        "sensorNames": [
+          "Ström Yta",
+          "Ström 4m",
+          "Ström 7m"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 69,
+      "name": "Marstrand",
+      "coordinates": {
+        "latitude": 57.886966,
+        "longitude": 11.593666
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 100,
+      "name": "Måvholmsbådan",
+      "coordinates": {
+        "latitude": 57.67233,
+        "longitude": 11.707477
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water",
+          "level",
+          "watertemp",
+          "stream"
+        ],
+        "sensorNames": [
+          "Salthalt Botten",
+          "Syrehalt Botten",
+          "Vattenstånd",
+          "Vattentemp",
+          "Vattentemp Botten",
+          "Ström Yta",
+          "Ström 3m",
+          "Ström 7m",
+          "Ström 15m",
+          "Ström 11m",
+          "Densitet Botten"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 55,
+      "name": "Mälaren",
+      "coordinates": {
+        "latitude": 59.45,
+        "longitude": 17.2833
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd Mälaren"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 173,
+      "name": "Nynäs fiskehamn",
+      "coordinates": {
+        "latitude": 58.900066,
+        "longitude": 17.953583
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 23,
+      "name": "Oden",
+      "coordinates": {
+        "latitude": 56.0254,
+        "longitude": 12.7008
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "watertemp",
+          "pressure",
+          "air",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Vattentemp",
+          "Lufttryck (MSLP)",
+          "Luftfuktighet",
+          "Lufttemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 181,
+      "name": "Onsala (Chalmers)",
+      "coordinates": {
+        "latitude": 57.39198,
+        "longitude": 11.91898
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 156,
+      "name": "Oskarshamn (SMHI)",
+      "coordinates": {
+        "latitude": 57.275,
+        "longitude": 16.4781
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 188,
+      "name": "Oxelösund Lotsstation",
+      "coordinates": {
+        "latitude": 58.661717,
+        "longitude": 17.12475
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 102,
+      "name": "Pite Älv (Skekraft)",
+      "coordinates": {
+        "latitude": 65.533004,
+        "longitude": 21.212055
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water"
+        ],
+        "sensorNames": [
+          "Vattenflöde"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 159,
+      "name": "Ratan (SMHI)",
+      "coordinates": {
+        "latitude": 63.9861,
+        "longitude": 20.895
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 127,
+      "name": "Ryssmasterna",
+      "coordinates": {
+        "latitude": 59.5316,
+        "longitude": 18.5478
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 157,
+      "name": "Simrishamn (SMHI)",
+      "coordinates": {
+        "latitude": 55.5575,
+        "longitude": 14.3578
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 78,
+      "name": "Sjötorp",
+      "coordinates": {
+        "latitude": 58.83685,
+        "longitude": 13.975567
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 162,
+      "name": "Skanör (SMHI)",
+      "coordinates": {
+        "latitude": 55.416666,
+        "longitude": 12.829444
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 79,
+      "name": "Skoghall",
+      "coordinates": {
+        "latitude": 59.316317,
+        "longitude": 13.4385
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 154,
+      "name": "Smögen (SMHI)",
+      "coordinates": {
+        "latitude": 58.353611,
+        "longitude": 11.217777
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 109,
+      "name": "Spikarna (SMHI)",
+      "coordinates": {
+        "latitude": 62.363333,
+        "longitude": 17.531111
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 82,
+      "name": "Stallbackabron",
+      "coordinates": {
+        "latitude": 58.309166,
+        "longitude": 12.318666
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 142,
+      "name": "Stenungsund (Borealis)",
+      "coordinates": {
+        "latitude": 58.087603,
+        "longitude": 11.801748
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "pressure",
+          "stream"
+        ],
+        "sensorNames": [
+          "Lufttryck",
+          "Ström 0-8m"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 151,
+      "name": "Stenungsund (SMHI)",
+      "coordinates": {
+        "latitude": 58.088933,
+        "longitude": 11.820667
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 144,
+      "name": "Stenungsund (Vattenfall)",
+      "coordinates": {
+        "latitude": 58.088906,
+        "longitude": 11.812867
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "stream"
+        ],
+        "sensorNames": [
+          "Ström 0-8m"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 176,
+      "name": "Stockholm (SMHI)",
+      "coordinates": {
+        "latitude": 59.324166,
+        "longitude": 18.081666
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 84,
+      "name": "Sunnanå",
+      "coordinates": {
+        "latitude": 58.708033,
+        "longitude": 12.506167
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 187,
+      "name": "Svea",
+      "coordinates": {
+        "latitude": 57.6023,
+        "longitude": 11.6616
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Syrehalt",
+          "Vattentemp",
+          "Salthalt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 138,
+      "name": "Tavastland (SMHI)",
+      "coordinates": {
+        "latitude": 55.5185,
+        "longitude": 15.072
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 106,
+      "name": "Trollhättan",
+      "coordinates": {
+        "latitude": 58.27638,
+        "longitude": 12.27601
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water"
+        ],
+        "sensorNames": [
+          "Vattenflöde"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 171,
+      "name": "Tångudden",
+      "coordinates": {
+        "latitude": 57.682059,
+        "longitude": 11.872151
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 89,
+      "name": "Varberg",
+      "coordinates": {
+        "latitude": 57.109565,
+        "longitude": 12.241543
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 107,
+      "name": "Vargön",
+      "coordinates": {
+        "latitude": 58.35727,
+        "longitude": 12.37488
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "water"
+        ],
+        "sensorNames": [
+          "Vattenflöde"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 163,
+      "name": "Viken (SMHI)",
+      "coordinates": {
+        "latitude": 56.142222,
+        "longitude": 12.579166
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level"
+        ],
+        "sensorNames": [
+          "Vattenstånd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 16,
+      "name": "Väderöarna vågboj (SMHI)",
+      "coordinates": {
+        "latitude": 58.4889,
+        "longitude": 10.933
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "wave",
+          "watertemp",
+          "airtemp"
+        ],
+        "sensorNames": [
+          "Vågperiod",
+          "Vattentemp",
+          "Lufttemp",
+          "Våghöjd"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 92,
+      "name": "Värmdö Garpen",
+      "coordinates": {
+        "latitude": 59.362975,
+        "longitude": 18.376317
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 149,
+      "name": "Västervik",
+      "coordinates": {
+        "latitude": 57.74815,
+        "longitude": 16.6747
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "level",
+          "watertemp"
+        ],
+        "sensorNames": [
+          "Vattenstånd",
+          "Vattentemp"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 95,
+      "name": "Åkerström",
+      "coordinates": {
+        "latitude": 58.258483,
+        "longitude": 12.230783
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    },
+    {
+      "id": 97,
+      "name": "Älvängen",
+      "coordinates": {
+        "latitude": 57.9469,
+        "longitude": 12.0871
+      },
+      "capabilities": {
+        "sensorTypes": [
+          "sight"
+        ],
+        "sensorNames": [
+          "Sikt"
+        ]
+      },
+      "hasWindSensors": false
+    }
+  ]
+}
