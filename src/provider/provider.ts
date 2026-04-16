@@ -75,6 +75,8 @@ export function createVivaProviderMethods(
         direction?: number
         averageSpeed?: number
         gustSpeed?: number
+        waterLevelCm?: number
+        waterTempC?: number
         observationQuality?: string
       }
 
@@ -85,9 +87,9 @@ export function createVivaProviderMethods(
       descriptionParts.push(`${(obs.distanceKm * KM_TO_NM).toFixed(1)}NM`)
       if (w.observationQuality) descriptionParts.push(w.observationQuality)
 
-      const data: WeatherData = {
+      const data = {
         date: w.timestamp || new Date().toISOString(),
-        type: 'observation',
+        type: 'observation' as const,
         description: descriptionParts.join(' · '),
         // Provider-specific extension (not currently part of the core WeatherData type):
         // lets clients compute accurate distance to the station.
@@ -97,11 +99,20 @@ export function createVivaProviderMethods(
             latitude: obs.stationCoordinates.latitude,
             longitude: obs.stationCoordinates.longitude
           }
-        } as any,
+        },
         wind: {
           ...(typeof w.averageSpeed === 'number' ? { speedTrue: w.averageSpeed } : {}),
-          ...(typeof w.direction === 'number' ? { directionTrue: w.direction } : {}),
+          ...(typeof w.direction === 'number' ? { directionTrue: (w.direction * Math.PI) / 180 } : {}),
           ...(typeof w.gustSpeed === 'number' ? { gust: w.gustSpeed } : {})
+        }
+      } as WeatherData & { station: { name: string; position: { latitude: number; longitude: number } } }
+
+      if (typeof w.waterLevelCm === 'number' || typeof w.waterTempC === 'number') {
+        data.water = {
+          // SignalK water.level is in metres; Viva reports in cm
+          ...(typeof w.waterLevelCm === 'number' ? { level: w.waterLevelCm / 100 } : {}),
+          // SignalK water.temperature is in Kelvin
+          ...(typeof w.waterTempC === 'number' ? { temperature: w.waterTempC + 273.15 } : {})
         }
       }
 

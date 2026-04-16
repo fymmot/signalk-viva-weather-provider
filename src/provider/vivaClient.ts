@@ -7,6 +7,8 @@ type VivaSample = {
   Heading?: number
   Quality?: string
   Updated?: string
+  Type?: string
+  Unit?: string
 }
 
 type VivaStationResult = {
@@ -25,6 +27,8 @@ export type ParsedStationWind = {
   direction?: number
   averageSpeed?: number
   gustSpeed?: number
+  waterLevelCm?: number
+  waterTempC?: number
   observationQuality?: string
   observationStale: boolean
 }
@@ -62,6 +66,8 @@ export function parseStationWind(root: unknown): ParsedStationWind | null {
 
   const byvind = samples.find((s) => sampleName(s) === 'Byvind')
   const medelvind = samples.find((s) => sampleName(s) === 'Medelvind')
+  const levelSample = samples.find((s) => (s.Type ?? '').toLowerCase() === 'level')
+  const watertempSample = samples.find((s) => (s.Type ?? '').toLowerCase() === 'watertemp')
 
   const gustSpeed = parseWindSpeedMps(byvind?.Value)
   const averageSpeed = parseWindSpeedMps(medelvind?.Value)
@@ -69,6 +75,11 @@ export function parseStationWind(root: unknown): ParsedStationWind | null {
   const direction =
     (byvind && typeof gustSpeed === 'number' ? headingDegrees(byvind) : undefined) ??
     (medelvind && typeof averageSpeed === 'number' ? headingDegrees(medelvind) : undefined)
+
+  const waterLevelCm =
+    levelSample?.Value !== undefined ? Number(levelSample.Value) : undefined
+  const waterTempC =
+    watertempSample?.Value !== undefined ? Number(watertempSample.Value) : undefined
 
   let observationQuality: string | undefined
   let observationStale = false
@@ -95,6 +106,8 @@ export function parseStationWind(root: unknown): ParsedStationWind | null {
     direction,
     averageSpeed,
     gustSpeed,
+    ...(typeof waterLevelCm === 'number' && Number.isFinite(waterLevelCm) ? { waterLevelCm } : {}),
+    ...(typeof waterTempC === 'number' && Number.isFinite(waterTempC) ? { waterTempC } : {}),
     observationQuality,
     observationStale
   }
