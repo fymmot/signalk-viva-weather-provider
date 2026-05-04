@@ -3,11 +3,7 @@
   "version": "0.1.0",
   "description": "Viva (Sjöfartsverket) wind observations provider plugin for Signal K Server Weather API.",
   "license": "MIT",
-  "author": "tommyfeldt",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tommyfeldt/viva-sk-weather-provider.git"
-  },
+  "author": "",
   "keywords": [
     "signalk",
     "signalk-node-server-plugin",
