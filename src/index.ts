@@ -1,7 +1,11 @@
 import type { Plugin, WeatherProvider } from '@signalk/server-api'
-import { coerceConfig } from './config'
+import { VESSEL_POLL_INTERVAL_MINUTES, coerceConfig } from './config'
 import type { PluginApp, Position, WeatherForecastType, WeatherReqParams } from './types'
 import { createVivaProviderMethods } from './provider/provider'
+import { startVesselPoll, stopVesselPoll } from './vesselPoll'
+
+/** v1 delta context for polled meteo (not `vessels.self`). */
+const METEO_DELTA_CONTEXT = 'viva.nearest'
 
 const CONFIG_SCHEMA = {
   type: 'object',
@@ -61,6 +65,25 @@ const CONFIG_SCHEMA = {
       properties: {
         debug: { type: 'boolean', title: 'Debug logging', default: false }
       }
+    },
+    vesselPoll: {
+      type: 'object',
+      title: 'Vessel position polling',
+      description:
+        'When enabled: periodically read navigation.position, prefetch the latest observation (HTTP cache), and emit v1 meteo deltas on context "viva.nearest". Uses a short wake interval and a minimum time between upstream fetches; off by default.',
+      properties: {
+        enable: {
+          type: 'boolean',
+          title: 'Poll periodically using vessel position',
+          default: false
+        },
+        pollIntervalMinutes: {
+          type: 'number',
+          title: 'Polling interval (minutes)',
+          enum: [...VESSEL_POLL_INTERVAL_MINUTES],
+          default: 60
+        }
+      }
     }
   }
 }
@@ -70,6 +93,16 @@ const CONFIG_UISCHEMA = {
     debug: {
       'ui:widget': 'checkbox',
       'ui:title': 'Debug logging'
+    }
+  },
+  vesselPoll: {
+    enable: {
+      'ui:widget': 'checkbox',
+      'ui:title': ' '
+    },
+    pollIntervalMinutes: {
+      'ui:widget': 'select',
+      'ui:title': 'Polling interval (minutes)'
     }
   }
 }
@@ -109,6 +142,18 @@ module.exports = function (app: PluginApp): Plugin {
         }
 
         app.registerWeatherProvider(weatherProvider)
+
+        startVesselPoll({
+          app,
+          enable: config.vesselPoll.enable,
+          pollIntervalMinutes: config.vesselPoll.pollIntervalMinutes,
+          loggingDebug: config.logging.debug,
+          label: plugin.id,
+          pluginId: plugin.id,
+          meteoContext: METEO_DELTA_CONTEXT,
+          fetchObservations: (position) => methods.getObservations(position, { maxCount: 1 })
+        })
+
         app.setPluginStatus?.('Started')
         if (config.logging.debug) app.debug(`[${plugin.id}] weather provider registered`)
       } catch (e) {
@@ -118,6 +163,7 @@ module.exports = function (app: PluginApp): Plugin {
       }
     },
     stop: () => {
+      stopVesselPoll()
       stopProvider?.()
       stopProvider = undefined
       app.setPluginStatus?.('Stopped')

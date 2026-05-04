@@ -102,7 +102,8 @@ export function createVivaProviderMethods(
         },
         wind: {
           ...(typeof w.averageSpeed === 'number' ? { speedTrue: w.averageSpeed } : {}),
-          ...(typeof w.direction === 'number' ? { directionTrue: (w.direction * Math.PI) / 180 } : {}),
+          // Degrees true, wind from (same convention as SMHI / MetOffice-style feeds and WeatherData examples).
+          ...(typeof w.direction === 'number' ? { directionTrue: w.direction } : {}),
           ...(typeof w.gustSpeed === 'number' ? { gust: w.gustSpeed } : {})
         }
       } as WeatherData & { station: { name: string; position: { latitude: number; longitude: number } } }

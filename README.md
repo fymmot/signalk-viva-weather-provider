@@ -1,40 +1,37 @@
 # signalk-viva-weather-provider
 
-Signal K Node Server **Weather Provider** plugin using Sjöfartsverket **Viva**.
+Signal K **weather provider** for Sjöfartsverket (Swedish Maritime Administration) **Viva** marine stations. 
 
-## What it supports
+**Observations only** (wind mean, gust, direction from the nearest suitable station). **Forecast and warning endpoints return empty results.**
 
-- **Observations only** (`/signalk/v2/api/weather/observations?...`) with wind:
-  - `wind.speedTrue` (mean wind, m/s)
-  - `wind.gust` (gust wind, m/s)
-  - `wind.directionTrue` (degrees “from”)
+**Plugin id:** `viva-weather-provider` — use `provider=viva-weather-provider` on the [Weather API](https://demo.signalk.org/documentation/Developing/REST_APIs/Weather_API.html) if you run multiple providers.
 
-- **No forecasts**: `/forecasts/*` returns `[]`
-- **No warnings**: `/warnings` returns `[]`
+## Install
 
-## Upstream Viva API
+1. **App Store:** Admin UI → **Appstore** → **Available** → install `signalk-viva-weather-provider` → **Restart** → **Server → Plugin Config** → enable.
+2. **CLI:** `cd ~/.signalk && npm install signalk-viva-weather-provider` → restart server → enable in Plugin Config.
 
-- Base URL: `https://services.viva.sjofartsverket.se:8080/output/vivaoutputservice.svc`
-- Endpoint: `GET /vivastation/{stationId}`
+Local dev: `npm link` in the repo, then `npm link signalk-viva-weather-provider` from `~/.signalk` ([plugin dev](https://demo.signalk.org/documentation/Developing/Plugins.html#link-your-project-to-signalk-server)).
 
-The plugin bundles a station list (`assets/found_stations.json`), ranks stations by distance to the requested lat/lon, and tries up to N closest stations until it finds a non-stale observation (`Quality` contains “gammalt” → stale).
+## Call the API
 
-## Install (local)
+Base path: `/signalk/v2/api/weather`. Required: `lat`, `lon`. Optional: `count`, `provider`.
 
-```bash
-cd /path/to/signalk-server
-npm install "/Users/tommyfeldt/git/viva-sk-weather-provider"
+```http
+GET /signalk/v2/api/weather/observations?lat=57.67&lon=11.85&provider=viva-weather-provider
 ```
 
-Enable it in **Server → Plugin Config**.
+List providers: `GET /signalk/v2/api/weather/_providers`. Response shapes: Admin → **Documentation → OpenAPI**.
+
+**Units:** wind m/s, direction degrees true (wind from).
+
+## Plugin config (high level)
+
+- Viva base URL, station try limits, cache TTL — see Plugin Config in the server UI.
+- **Vessel position polling** (off by default): when on, periodically fetches from `navigation.position` and always emits v1 meteo deltas on context **`viva.nearest`** (plus HTTP cache warmup).
 
 ## Development
 
 ```bash
-cd /Users/tommyfeldt/git/viva-sk-weather-provider
-npm install
-npm test
-npm run build
-node dist/smoke.js
+npm install && npm test && npm run build && node dist/smoke.js
 ```
-
