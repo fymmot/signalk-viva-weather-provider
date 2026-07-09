@@ -1,37 +1,66 @@
 # signalk-viva-weather-provider
 
-Signal K **weather provider** for Sjöfartsverket (Swedish Maritime Administration) **Viva** marine stations. 
+A Signal K **weather provider** backed by Sjöfartsverket (Swedish Maritime
+Administration) **Viva** marine stations. Once installed, the Signal K **Weather API**
+and any app that uses it can show live observations for a position — best coverage in
+Swedish coastal and inland waters.
 
-**Observations only** (wind mean, gust, direction from the nearest suitable station). **Forecast and warning endpoints return empty results.**
+**Observations only** — wind (mean, gust, direction), water level, and water
+temperature from the nearest suitable station. Forecast and warning requests return
+empty results (Viva provides observations only). For forecasts and warnings, pair this
+with a forecast provider such as `signalk-smhi-weather-provider`.
 
-**Plugin id:** `viva-weather-provider` — use `provider=viva-weather-provider` on the [Weather API](https://demo.signalk.org/documentation/Developing/REST_APIs/Weather_API.html) if you run multiple providers.
+## Requirements
+
+- **Signal K server v2** with the Weather API (server 2.x). The plugin registers
+  itself as a weather provider on startup.
 
 ## Install
 
-1. **App Store:** Admin UI → **Appstore** → **Available** → install `signalk-viva-weather-provider` → **Restart** → **Server → Plugin Config** → enable.
-2. **CLI:** `cd ~/.signalk && npm install signalk-viva-weather-provider` → restart server → enable in Plugin Config.
+1. **App Store (recommended):** Admin UI → **Appstore → Available**, search
+   `signalk-viva-weather-provider`, install, restart the server, then enable it under
+   **Server → Plugin Config**.
+2. **CLI:** `cd ~/.signalk && npm install signalk-viva-weather-provider`, restart the
+   server, then enable it in Plugin Config.
 
-Local dev: `npm link` in the repo, then `npm link signalk-viva-weather-provider` from `~/.signalk` ([plugin dev](https://demo.signalk.org/documentation/Developing/Plugins.html#link-your-project-to-signalk-server)).
+It works out of the box — no configuration is required.
 
-## Call the API
+## Using it
 
-Base path: `/signalk/v2/api/weather`. Required: `lat`, `lon`. Optional: `count`, `provider`.
+Weather-aware Signal K apps pick up the provider automatically. To check it directly,
+call the Weather API with a latitude and longitude:
 
 ```http
-GET /signalk/v2/api/weather/observations?lat=57.67&lon=11.85&provider=viva-weather-provider
+GET /signalk/v2/api/weather/observations?lat=57.67&lon=11.85
 ```
 
-List providers: `GET /signalk/v2/api/weather/_providers`. Response shapes: Admin → **Documentation → OpenAPI**.
+Running more than one weather provider? Add `&provider=viva-weather-provider` to pick
+this one. List installed providers at `GET /signalk/v2/api/weather/_providers`.
 
-**Units:** wind m/s, direction degrees true (wind from).
+**Units:** wind m/s, wind direction degrees true (wind from), water level m, water
+temperature K.
 
-## Plugin config (high level)
+## Configuration
 
-- Viva base URL, station try limits, cache TTL — see Plugin Config in the server UI.
-- **Vessel position polling** (off by default): when on, periodically fetches from `navigation.position` and always emits v1 meteo deltas on context **`viva.nearest`** (plus HTTP cache warmup).
+All optional — the defaults are fine for most boats.
 
-## Development
+| Setting | Default | What it does |
+|---|---|---|
+| **Follow the vessel position** | off | Periodically fetch observations for your current position and publish them on the Signal K stream (context `viva.nearest`), so weather follows the boat. |
+| **Update interval** | 60 min | How often to refresh when following the vessel (15 / 30 / 60). |
+| **Max weather-station distance** | 250 km | Observations come from the nearest Viva station; beyond this, observations are empty. |
+| **Debug logging** | off | Extra detail in the Signal K log. |
+
+## Develop
 
 ```bash
-npm install && npm test && npm run build && node dist/smoke.js
+npm install
+npm test
+npm run build
+node dist/smoke.js   # quick live check against Viva
 ```
+
+## Note
+
+Parts of this plugin were written with AI assistance. Reviewed and tested before
+release; issues and PRs welcome.

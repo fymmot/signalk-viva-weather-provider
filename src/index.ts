@@ -7,44 +7,29 @@ import { startVesselPoll, stopVesselPoll } from './vesselPoll'
 /** v1 delta context for polled meteo (not `vessels.self`). */
 const METEO_DELTA_CONTEXT = 'viva.nearest'
 
+// Only user-relevant options are exposed. The provider works with no configuration;
+// the Viva endpoint, station retry limit, cache TTL and network timeout keep sensible
+// defaults (see config.ts).
 const CONFIG_SCHEMA = {
   type: 'object',
   properties: {
-    viva: {
+    vesselPoll: {
       type: 'object',
-      title: 'Viva endpoints',
+      title: 'Track vessel position',
+      description:
+        'Periodically fetch observations for your current position and publish them on the Signal K stream (context "viva.nearest"), so weather follows the boat. Off by default; the Weather API works regardless.',
       properties: {
-        baseUrl: {
-          type: 'string',
-          title: 'Viva base URL',
-          default: 'https://services.viva.sjofartsverket.se:8080/output/vivaoutputservice.svc'
+        enable: {
+          type: 'boolean',
+          title: 'Follow the vessel position',
+          default: false
         },
-        maxStationTries: {
+        pollIntervalMinutes: {
           type: 'number',
-          title: 'Max station tries',
-          default: 25,
-          description: 'Try the nearest N stations until we find non-stale observations.'
+          title: 'Update interval (minutes)',
+          enum: [...VESSEL_POLL_INTERVAL_MINUTES],
+          default: 60
         }
-      }
-    },
-    cache: {
-      type: 'object',
-      title: 'Caching',
-      properties: {
-        ttlSecondsObservations: { type: 'number', title: 'Observations TTL (s)', default: 60 },
-        keyDecimals: {
-          type: 'number',
-          title: 'Lat/Lon cache key decimals',
-          default: 3,
-          description: 'Rounding applied to cache keys only (not requests).'
-        }
-      }
-    },
-    network: {
-      type: 'object',
-      title: 'Network',
-      properties: {
-        timeoutMs: { type: 'number', title: 'HTTP timeout (ms)', default: 8000 }
       }
     },
     observations: {
@@ -53,57 +38,30 @@ const CONFIG_SCHEMA = {
       properties: {
         maxStationDistanceKm: {
           type: 'number',
-          title: 'Max station distance (km)',
+          title: 'Max weather-station distance (km)',
           default: 250,
-          description: 'If the nearest suitable station is farther away, observations may be empty.'
+          description:
+            'Observations come from the nearest Viva station. If none is within this distance, observations are empty.'
         }
       }
     },
     logging: {
       type: 'object',
-      title: 'Logging',
+      title: 'Advanced',
       properties: {
         debug: { type: 'boolean', title: 'Debug logging', default: false }
-      }
-    },
-    vesselPoll: {
-      type: 'object',
-      title: 'Vessel position polling',
-      description:
-        'When enabled: periodically read navigation.position, prefetch the latest observation (HTTP cache), and emit v1 meteo deltas on context "viva.nearest". Uses a short wake interval and a minimum time between upstream fetches; off by default.',
-      properties: {
-        enable: {
-          type: 'boolean',
-          title: 'Poll periodically using vessel position',
-          default: false
-        },
-        pollIntervalMinutes: {
-          type: 'number',
-          title: 'Polling interval (minutes)',
-          enum: [...VESSEL_POLL_INTERVAL_MINUTES],
-          default: 60
-        }
       }
     }
   }
 }
 
 const CONFIG_UISCHEMA = {
-  logging: {
-    debug: {
-      'ui:widget': 'checkbox',
-      'ui:title': 'Debug logging'
-    }
-  },
   vesselPoll: {
-    enable: {
-      'ui:widget': 'checkbox',
-      'ui:title': ' '
-    },
-    pollIntervalMinutes: {
-      'ui:widget': 'select',
-      'ui:title': 'Polling interval (minutes)'
-    }
+    enable: { 'ui:widget': 'checkbox' },
+    pollIntervalMinutes: { 'ui:widget': 'select' }
+  },
+  logging: {
+    debug: { 'ui:widget': 'checkbox' }
   }
 }
 
@@ -113,7 +71,8 @@ module.exports = function (app: PluginApp): Plugin {
   const plugin: Plugin = {
     id: 'viva-weather-provider',
     name: 'Viva Weather Provider',
-    description: 'Signal K v2 Weather Provider using Sjöfartsverket Viva (observations only).',
+    description:
+      'Signal K weather provider using Sjöfartsverket Viva marine stations (wind and water observations; no forecasts or warnings).',
     schema: () => CONFIG_SCHEMA,
     uiSchema: () => CONFIG_UISCHEMA,
     start: (settings: unknown) => {
