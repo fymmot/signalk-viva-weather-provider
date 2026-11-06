@@ -1,6 +1,6 @@
 {
   "name": "signalk-viva-weather-provider",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Signal K weather provider for Sjöfartsverket Viva marine stations (wind and water observations).",
   "license": "MIT",
   "author": "fymmot",
@@ -20,11 +20,18 @@
     "weather",
     "viva"
   ],
+  "signalk": {
+    "screenshots": [
+      "./assets/screenshots/observations-light.png",
+      "./assets/screenshots/observations-dark.png"
+    ]
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "assets"
+    "assets",
+    "CHANGELOG.md"
   ],
   "engines": {
     "node": ">=18"
