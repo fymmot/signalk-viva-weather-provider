@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+- Add an App Store icon.
+
+No change to the plugin's behaviour.
+
 ## 0.1.1
 
 - Run the shared Signal K plugin CI on every push.

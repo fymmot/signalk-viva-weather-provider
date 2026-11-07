@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17A9A3"/>
+      <stop offset="1" stop-color="#0B6670"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <g transform="translate(128 98) scale(0.7) translate(-128 -145)">
+  <line x1="74" y1="52" x2="74" y2="194" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  <g stroke-linejoin="round" stroke-width="6">
+    <polygon points="82,62 124,68 124,118 82,126" fill="#FF7A45" stroke="#FF7A45"/>
+    <polygon points="124,68 164,74 164,111 124,118" fill="#FFFFFF" stroke="#FFFFFF"/>
+    <polygon points="164,74 204,80 204,104 164,111" fill="#FF7A45" stroke="#FF7A45"/>
+  </g>
+  <g fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round">
+    <path d="M36 208 q 23 -14 46 0 t 46 0 t 46 0 t 46 0"/>
+    <path d="M58 230 q 23 -14 46 0 t 46 0 t 46 0" opacity="0.6"/>
+  </g>
+  </g>
+  <text x="128" y="226" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="62" letter-spacing="4" fill="#FFFFFF">VIVA</text>
+</svg>
