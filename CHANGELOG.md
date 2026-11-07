@@ -2,7 +2,7 @@
 
 ## 0.1.2
 
-- Add an App Store icon.
+- Add an App Store icon and a readable name ("Viva Weather Provider").
 
 No change to the plugin's behaviour.
 

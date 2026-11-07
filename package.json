@@ -21,6 +21,7 @@
     "viva"
   ],
   "signalk": {
+    "displayName": "Viva Weather Provider",
     "appIcon": "./assets/icon.png",
     "screenshots": [
       "./assets/screenshots/observations-light.png",
