@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0
 
 - **Breaking for clients that worked around the old output.** `wind.directionTrue` is now
   in radians, as the Signal K Weather API specifies. It was in degrees, so clients that
