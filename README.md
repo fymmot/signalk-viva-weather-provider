@@ -37,8 +37,9 @@ GET /signalk/v2/api/weather/observations?lat=57.67&lon=11.85
 Running more than one weather provider? Add `&provider=viva-weather-provider` to pick
 this one. List installed providers at `GET /signalk/v2/api/weather/_providers`.
 
-**Units:** wind m/s, wind direction degrees true (wind from), water level m, water
-temperature K.
+**Units:** SI, as the Weather API specifies: wind speed and gust m/s, wind direction
+radians true (the direction the wind blows from), water level m, water temperature K.
+`date` is ISO 8601 in UTC; Viva's Swedish local times are converted.
 
 ## Configuration
 

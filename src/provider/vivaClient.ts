@@ -1,4 +1,5 @@
 import type { HttpClient } from '../http'
+import { vivaTimestampToIso } from '../vivaTime'
 
 type VivaSample = {
   Name?: string
@@ -21,10 +22,16 @@ type VivaResponseRoot = {
   GetSingleStationResult?: VivaStationResult
 }
 
+/**
+ * One Viva station reading in Viva's own units. Conversion to Signal K SI units happens in
+ * `buildObservation` (provider.ts), so each field's unit is in its name.
+ */
 export type ParsedStationWind = {
   stationName: string
+  /** ISO 8601 UTC; Viva's zone-less Swedish local time already converted. */
   timestamp: string
-  direction?: number
+  /** Compass degrees true, the direction the wind blows from. */
+  directionDeg?: number
   averageSpeed?: number
   gustSpeed?: number
   waterLevelCm?: number
@@ -52,6 +59,15 @@ function toArray(samples: VivaStationResult['Samples']): VivaSample[] {
   return [samples]
 }
 
+/**
+ * True when the sample is in [expected], or names no unit. A sample in any other unit is
+ * dropped rather than passed on under the wrong one.
+ */
+function hasUnit(s: VivaSample | undefined, expected: string): boolean {
+  const unit = (s?.Unit ?? '').trim()
+  return !unit || unit.toLowerCase() === expected.toLowerCase()
+}
+
 function headingDegrees(s?: VivaSample): number | undefined {
   const h = s?.Heading
   return typeof h === 'number' && Number.isFinite(h) ? h : undefined
@@ -69,17 +85,21 @@ export function parseStationWind(root: unknown): ParsedStationWind | null {
   const levelSample = samples.find((s) => (s.Type ?? '').toLowerCase() === 'level')
   const watertempSample = samples.find((s) => (s.Type ?? '').toLowerCase() === 'watertemp')
 
-  const gustSpeed = parseWindSpeedMps(byvind?.Value)
-  const averageSpeed = parseWindSpeedMps(medelvind?.Value)
+  const gustSpeed = hasUnit(byvind, 'm/s') ? parseWindSpeedMps(byvind?.Value) : undefined
+  const averageSpeed = hasUnit(medelvind, 'm/s') ? parseWindSpeedMps(medelvind?.Value) : undefined
 
-  const direction =
+  const directionDeg =
     (byvind && typeof gustSpeed === 'number' ? headingDegrees(byvind) : undefined) ??
     (medelvind && typeof averageSpeed === 'number' ? headingDegrees(medelvind) : undefined)
 
   const waterLevelCm =
-    levelSample?.Value !== undefined ? Number(levelSample.Value) : undefined
+    levelSample?.Value !== undefined && hasUnit(levelSample, 'cm')
+      ? Number(levelSample.Value)
+      : undefined
   const waterTempC =
-    watertempSample?.Value !== undefined ? Number(watertempSample.Value) : undefined
+    watertempSample?.Value !== undefined && hasUnit(watertempSample, '°C')
+      ? Number(watertempSample.Value)
+      : undefined
 
   let observationQuality: string | undefined
   let observationStale = false
@@ -93,9 +113,9 @@ export function parseStationWind(root: unknown): ParsedStationWind | null {
   }
 
   const timestamp =
-    (byvind?.Updated ?? '').trim() ||
-    (medelvind?.Updated ?? '').trim() ||
-    (samples[0]?.Updated ?? '').trim() ||
+    vivaTimestampToIso(byvind?.Updated) ??
+    vivaTimestampToIso(medelvind?.Updated) ??
+    vivaTimestampToIso(samples[0]?.Updated) ??
     new Date().toISOString()
 
   const stationName = (data.Name ?? '').trim()
@@ -103,7 +123,7 @@ export function parseStationWind(root: unknown): ParsedStationWind | null {
   return {
     stationName,
     timestamp,
-    direction,
+    directionDeg,
     averageSpeed,
     gustSpeed,
     ...(typeof waterLevelCm === 'number' && Number.isFinite(waterLevelCm) ? { waterLevelCm } : {}),

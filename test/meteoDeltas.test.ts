@@ -13,7 +13,7 @@ describe('emitObservationMeteoDeltas', () => {
       obs: {
         date: '2026-05-04T12:00:00.000Z',
         type: 'observation',
-        wind: { speedTrue: 6.2, directionTrue: 270, gust: 10.5 }
+        wind: { speedTrue: 6.2, directionTrue: (3 * Math.PI) / 2, gust: 10.5 }
       }
     })
     expect(handleMessage).toHaveBeenCalledTimes(1)
@@ -23,5 +23,10 @@ describe('emitObservationMeteoDeltas', () => {
     const values = msg.updates?.[0]?.values ?? []
     const paths = values.map((v: { path: string }) => v.path)
     expect(paths).toContain('environment.wind.directionTrue')
+    // Signal K `environment.*` paths are SI too: the direction passes through in radians.
+    const dir = values.find((v: { path: string }) => v.path === 'environment.wind.directionTrue')
+    expect(dir?.value).toBeCloseTo((3 * Math.PI) / 2, 10)
+    const date = values.find((v: { path: string }) => v.path === 'environment.date')
+    expect(date?.value).toBe('2026-05-04T12:00:00.000Z')
   })
 })

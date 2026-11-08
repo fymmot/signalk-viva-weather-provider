@@ -13,8 +13,62 @@ import { createAsyncCache } from '../cache'
 import { haversineKm, roundCoord } from '../geo'
 import { loadWindStations } from './stations'
 import { createVivaClient } from './vivaClient'
+import type { ParsedStationWind } from './vivaClient'
+import { celsiusToKelvin, centimetresToMetres, degToRad } from '../units'
 
 const KM_TO_NM = 0.5399568034557235
+
+/** A Weather API observation plus this provider's `station` extension. */
+export type VivaObservation = WeatherData & {
+  // Provider-specific extension (not part of the core WeatherData type):
+  // lets clients compute accurate distance to the station.
+  station: { name: string; position: { latitude: number; longitude: number } }
+}
+
+/**
+ * Map one Viva reading onto a Signal K Weather API observation, in the API's SI units:
+ * `date` ISO 8601 UTC, wind m/s and radians (true, the direction it blows from),
+ * water level m, water temperature K.
+ */
+export function buildObservation(args: {
+  parsed: ParsedStationWind
+  stationName?: string
+  stationCoordinates: { latitude: number; longitude: number }
+  distanceKm: number
+}): VivaObservation {
+  const w = args.parsed
+  const stationLabel = args.stationName || w.stationName || 'Viva'
+
+  const descriptionParts = [stationLabel, `${(args.distanceKm * KM_TO_NM).toFixed(1)}NM`]
+  if (w.observationQuality) descriptionParts.push(w.observationQuality)
+
+  const data: VivaObservation = {
+    date: w.timestamp,
+    type: 'observation',
+    description: descriptionParts.join(' · '),
+    station: {
+      name: stationLabel,
+      position: {
+        latitude: args.stationCoordinates.latitude,
+        longitude: args.stationCoordinates.longitude
+      }
+    },
+    wind: {
+      ...(typeof w.averageSpeed === 'number' ? { speedTrue: w.averageSpeed } : {}),
+      ...(typeof w.directionDeg === 'number' ? { directionTrue: degToRad(w.directionDeg) } : {}),
+      ...(typeof w.gustSpeed === 'number' ? { gust: w.gustSpeed } : {})
+    }
+  }
+
+  if (typeof w.waterLevelCm === 'number' || typeof w.waterTempC === 'number') {
+    data.water = {
+      ...(typeof w.waterLevelCm === 'number' ? { level: centimetresToMetres(w.waterLevelCm) } : {}),
+      ...(typeof w.waterTempC === 'number' ? { temperature: celsiusToKelvin(w.waterTempC) } : {})
+    }
+  }
+
+  return data
+}
 
 export function createVivaProviderMethods(
   app: PluginApp,
@@ -70,52 +124,12 @@ export function createVivaProviderMethods(
 
       if (!obs) return []
 
-      const w = obs.parsed as {
-        timestamp: string
-        direction?: number
-        averageSpeed?: number
-        gustSpeed?: number
-        waterLevelCm?: number
-        waterTempC?: number
-        observationQuality?: string
-      }
-
-      const descriptionParts: string[] = []
-      const stationLabel =
-        (obs.stationName as string) || (obs.parsed.stationName as string) || 'Viva'
-      descriptionParts.push(stationLabel)
-      descriptionParts.push(`${(obs.distanceKm * KM_TO_NM).toFixed(1)}NM`)
-      if (w.observationQuality) descriptionParts.push(w.observationQuality)
-
-      const data = {
-        date: w.timestamp || new Date().toISOString(),
-        type: 'observation' as const,
-        description: descriptionParts.join(' · '),
-        // Provider-specific extension (not currently part of the core WeatherData type):
-        // lets clients compute accurate distance to the station.
-        station: {
-          name: stationLabel,
-          position: {
-            latitude: obs.stationCoordinates.latitude,
-            longitude: obs.stationCoordinates.longitude
-          }
-        },
-        wind: {
-          ...(typeof w.averageSpeed === 'number' ? { speedTrue: w.averageSpeed } : {}),
-          // Degrees true, wind from (same convention as SMHI / MetOffice-style feeds and WeatherData examples).
-          ...(typeof w.direction === 'number' ? { directionTrue: w.direction } : {}),
-          ...(typeof w.gustSpeed === 'number' ? { gust: w.gustSpeed } : {})
-        }
-      } as WeatherData & { station: { name: string; position: { latitude: number; longitude: number } } }
-
-      if (typeof w.waterLevelCm === 'number' || typeof w.waterTempC === 'number') {
-        data.water = {
-          // SignalK water.level is in metres; Viva reports in cm
-          ...(typeof w.waterLevelCm === 'number' ? { level: w.waterLevelCm / 100 } : {}),
-          // SignalK water.temperature is in Kelvin
-          ...(typeof w.waterTempC === 'number' ? { temperature: w.waterTempC + 273.15 } : {})
-        }
-      }
+      const data = buildObservation({
+        parsed: obs.parsed as ParsedStationWind,
+        stationName: obs.stationName as string,
+        stationCoordinates: obs.stationCoordinates as { latitude: number; longitude: number },
+        distanceKm: obs.distanceKm as number
+      })
 
       const result = [data]
       if (!maxCount || maxCount <= 1) return result

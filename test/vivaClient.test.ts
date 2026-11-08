@@ -30,6 +30,8 @@ describe('parseStationWind', () => {
     expect(parsed?.waterLevelCm).toBe(-18)
     expect(parsed?.waterTempC).toBe(5.7)
     expect(parsed?.observationStale).toBe(false)
+    // Zone-less Swedish summer time (CEST) -> UTC.
+    expect(parsed?.timestamp).toBe('2026-04-16T12:22:00.000Z')
   })
 
   it('parses gust/mean wind and stale flag', () => {
@@ -57,7 +59,8 @@ describe('parseStationWind', () => {
     expect(parsed).not.toBeNull()
     expect(parsed?.gustSpeed).toBe(10.5)
     expect(parsed?.averageSpeed).toBe(6.2)
-    expect(parsed?.direction).toBe(123)
+    expect(parsed?.directionDeg).toBe(123)
+    expect(parsed?.timestamp).toBe('2026-04-15T12:00:00.000Z')
     expect(parsed?.observationStale).toBe(true)
   })
 })
